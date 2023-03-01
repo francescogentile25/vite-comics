@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <ul class="prova">
+            <ul class="menu">
                 <li class="nav-item" v-for="icon in icons">
                     <img :src="icon.url" class="icon" alt="">
                     <p class="icon-txt">{{ icon.label }}</p>
@@ -94,73 +94,86 @@ export default {
 @use '../styles/partials/generic' as*;
 @use '../styles/partials/variables' as*;
 
-.nav-item {
-    align-items: center;
-    display: flex;
-}
-
-.icon {
-    width: 42px;
-    margin-right: 16px;
-}
-
-.icon-txt {
-    color: white;
-    text-transform: uppercase;
-}
-
 header {
     background-color: $blue;
-}
 
-.prova {
-    padding: 48px;
-    justify-content: space-between;
-    display: flex;
-    gap: 50px;
-}
+    .container {
+        .menu {
+            padding: 48px;
+            justify-content: space-between;
+            display: flex;
+            gap: 50px;
 
-.nav-link {
-    color: white;
-    display: flex;
-    gap: 56px;
+            .nav-item {
+                align-items: center;
+                display: flex;
+
+                .icon {
+                    width: 42px;
+                    margin-right: 16px;
+                }
+
+                .icon-txt {
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
 }
 
 main {
     overflow: hidden;
     background-image: url(../../public/img/footer-bg.jpg);
+
+    .container {
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                margin-top: -120px;
+            }
+
+            .nav-link {
+                color: white;
+                display: flex;
+                gap: 56px;
+            }
+        }
+    }
 }
 
 footer {
     background-color: $grey;
     padding: 30px 0;
-}
 
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .container {
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-.social-logo {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
+            .social-logo {
+                display: flex;
+                gap: 25px;
+                align-items: center;
 
-.logo {
-    margin-top: -120px;
-}
+                .social-title {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $blue;
+                }
 
-.social-title {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $blue;
-}
+            }
 
-.button {
-    text-transform: uppercase;
-    padding: 15px;
-    border: 1px solid $blue;
+            .button {
+                text-transform: uppercase;
+                padding: 15px;
+                border: 1px solid $blue;
+            }
+        }
+    }
 }
 </style>
