@@ -23,9 +23,22 @@ export default {
 </script>
 
 <template>
-  <HeaderComponent></HeaderComponent>
-  <MainComponent></MainComponent>
-  <FooterComponent></FooterComponent>
+  <header>
+    <HeaderComponent></HeaderComponent>
+  </header>
+  <main>
+    <MainComponent></MainComponent>
+  </main>
+  <footer>
+    <FooterComponent></FooterComponent>
+  </footer>
 </template>
 
-<style scoped></style>
+<style  lang="scss" scoped>
+@use 'styles/partials/generic' as*;
+
+main {
+  background-color: black;
+  margin-top: 20px
+}
+</style>

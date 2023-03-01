@@ -65,7 +65,8 @@
     padding: 51px 0;
 }
 
-.active {
+.active,
+.nav-item:hover {
     color: blue;
     border-bottom: 2px solid blue;
 }
