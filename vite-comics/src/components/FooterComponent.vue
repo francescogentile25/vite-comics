@@ -8,19 +8,19 @@
                 </li>
                 <li class="nav-item">
                     <img src="/img/buy-comics-merchandise.png" class="icon" alt="">
-                    <p class="icon-txt">Digital comics</p>
+                    <p class="icon-txt">DC merchandise</p>
                 </li>
                 <li class="nav-item">
                     <img src="/img/buy-comics-subscriptions.png" class="icon" alt="">
-                    <p class="icon-txt">Digital comics</p>
+                    <p class="icon-txt">Subscription</p>
                 </li>
                 <li class="nav-item">
                     <img src="/img/buy-comics-shop-locator.png" class="icon" alt="">
-                    <p class="icon-txt">Digital comics</p>
+                    <p class="icon-txt">Comic Shop Locator</p>
                 </li>
                 <li class="nav-item">
                     <img src="/img/buy-comics-digital-comics.png" class="icon" alt="">
-                    <p class="icon-txt">Digital comics</p>
+                    <p class="icon-txt">Dc pover visa</p>
                 </li>
             </ul>
         </div>
@@ -135,7 +135,7 @@ header {
     padding: 48px;
     justify-content: space-between;
     display: flex;
-    gap: 70px;
+    gap: 50px;
 }
 
 .nav-link {
