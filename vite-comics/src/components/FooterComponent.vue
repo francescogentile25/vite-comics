@@ -2,25 +2,9 @@
     <header>
         <div class="container">
             <ul class="prova">
-                <li class="nav-item">
-                    <img src="/img/buy-comics-digital-comics.png" class="icon" alt="">
-                    <p class="icon-txt">Digital comics</p>
-                </li>
-                <li class="nav-item">
-                    <img src="/img/buy-comics-merchandise.png" class="icon" alt="">
-                    <p class="icon-txt">DC merchandise</p>
-                </li>
-                <li class="nav-item">
-                    <img src="/img/buy-comics-subscriptions.png" class="icon" alt="">
-                    <p class="icon-txt">Subscription</p>
-                </li>
-                <li class="nav-item">
-                    <img src="/img/buy-comics-shop-locator.png" class="icon" alt="">
-                    <p class="icon-txt">Comic Shop Locator</p>
-                </li>
-                <li class="nav-item">
-                    <img src="/img/buy-comics-digital-comics.png" class="icon" alt="">
-                    <p class="icon-txt">Dc pover visa</p>
+                <li class="nav-item" v-for="icon in icons">
+                    <img :src="icon.url" class="icon" alt="">
+                    <p class="icon-txt">{{ icon.label }}</p>
                 </li>
             </ul>
         </div>
@@ -29,49 +13,10 @@
         <div class="container">
             <div class="row">
                 <div class="nav-link">
-                    <div class="col">
-                        <h3>DC COMICS</h3>
-                        <ul>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Shop</h3>
-                        <ul>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>DC</h3>
-                        <ul>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Site</h3>
-                        <ul>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
-                            <li>lorem</li>
+                    <div class="col" v-for=" link in links">
+                        <h3>{{ link.title }}</h3>
+                        <ul v-for=" text in link.text">
+                            <li>{{ text }}</li>
                         </ul>
                     </div>
                 </div>
@@ -87,11 +32,9 @@
                 </div>
                 <div class="social-logo">
                     <p class="social-title">Follow us</p>
-                    <img src="../../public/img/footer-facebook.png" alt="">
-                    <img src="../../public/img/footer-twitter.png" alt="">
-                    <img src="../../public/img/footer-youtube.png" alt="">
-                    <img src="../../public/img/footer-pinterest.png" alt="">
-                    <img src="../../public/img/footer-periscope.png" alt="">
+                    <div v-for="src in socialImg">
+                        <img :src="src" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +45,46 @@
 export default {
     data() {
         return {
-            saluto: 'ciao'
+            saluto: 'ciao',
+            icons: [
+                {
+                    label: 'Digital comics',
+                    url: '/img/buy-comics-digital-comics.png'
+                },
+                {
+                    label: 'DC merchandise',
+                    url: '/img/buy-comics-merchandise.png'
+                },
+                {
+                    label: 'Subscription',
+                    url: '/img/buy-comics-subscriptions.png'
+                }, {
+                    label: 'Comic Shop Locator',
+                    url: '/img/buy-comics-shop-locator.png'
+                }, {
+                    label: 'Dc pover visa',
+                    url: '/img/buy-comics-digital-comics.png'
+                },
+            ],
+            links: [
+                {
+                    title: 'DC COMICS',
+                    text: ['Characterrs', 'Comics', 'Movies', 'Tv', 'Games', 'Videos', 'News']
+                },
+                {
+                    title: ' SHOP',
+                    text: ['Shop Dc', 'Shop Dc Collectibles'],
+                },
+                {
+                    title: ' DC',
+                    text: ['Terms of Use', 'Privacy policy', 'Ad Choice', 'Advertising', 'Jobs', 'Subsriptions', 'Talent Workshops', 'CPSC Cerificates', 'Ratings', 'Shop Help', 'Conacts Us']
+                },
+                {
+                    title: ' SITES',
+                    text: ['Dc', 'Mad Magazine', 'DC Kids', 'Dc Universe', 'Dc Poer Visa'],
+                }
+            ],
+            socialImg: ['../../public/img/footer-facebook.png', '../../public/img/footer-twitter.png', '../../public/img/footer-youtube.png', '../../public/img/footer-pinterest.png', '../../public/img/footer-periscope.png'],
         }
     },
 }
