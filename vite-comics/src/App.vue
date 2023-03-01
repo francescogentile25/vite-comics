@@ -37,6 +37,7 @@ export default {
 <style  lang="scss" scoped>
 @use 'styles/partials/generic' as*;
 
+
 main {
   background-color: black;
   margin-top: 20px

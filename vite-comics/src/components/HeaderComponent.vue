@@ -49,6 +49,7 @@
 
 <style lang="scss" scoped>
 @use '../styles/partials/generic' as*;
+@use '../styles/partials/variables' as*;
 
 .header {
     display: flex;
@@ -67,7 +68,7 @@
 
 .active,
 .nav-item:hover {
-    color: blue;
-    border-bottom: 2px solid blue;
+    color: $blue;
+    border-bottom: 2px solid $blue;
 }
 </style>
