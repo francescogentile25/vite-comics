@@ -10,7 +10,7 @@ export default {
     props: {
         card: {
             type: Object,
-            required: true
+            required: true,
         },
     },
     data() {
